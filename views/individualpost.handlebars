@@ -1,0 +1,30 @@
+<div class="container">
+    {{#each data}}
+    <a href={{this.link}}>
+        <h3 class="theID text-center" value={{this._id}}>{{this.title}}</h3>
+    </a>
+    {{/each}}
+
+    <div class="container text-light bg-dark rounded p-3">
+        
+            
+                <h6>Previous Comment:</h6>
+                {{#each note}}
+                Title:
+                {{this.title}}<br>Post:
+                {{this.body}}
+                <br><br>
+                <button class="btn btn-danger deletePost">Delete Post</button>
+                <br>
+            {{/each}}
+    </div>
+<br>
+    <div class="container bg-info p-3 rounded">
+        <h4>Replace Comment</h4>
+        <div>Post Title:</div>
+        <input id="postTitle" class="form-control" type="text"></input><br>
+        <div>Comments:</div>
+        <textarea rows="5" cols="60" class="form-control" id="theContent"></textarea><br>
+        <button class="btn btn-success bButton" type="submit">Submit</button>
+    </div>
+</div>
